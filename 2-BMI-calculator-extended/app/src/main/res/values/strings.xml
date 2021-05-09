@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BMI-calc-extended</string>
+    <string name="weight">Weight[kg]</string>
+    <string name="height">Height[cm]</string>
+    <string name="age_label">Age</string>
+    <string name="calculate">Calculate</string>
+    <string name="bmi_calc">BMI calculator</string>
+    <string name="back_to_start_button">Back to start</string>
+    <string name="show_me_recipe_button">Go to recipe</string>
+    <string name="go_to_recipe_label">Do you want to check what to eat in Coronavirus times?</string>
+    <string name="go_back_button">Go back</string>
+    <string name="underweight_recipe_title">Mediterranean Salmon Pasta</string>
+    <string name="normalweight_recipe_title">Recipe for Normal Weight</string>
+    <string name="obese_recipe_title">Recipe for Obese</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="bmr_calc">BMR calculator</string>
+    <string name="quiz_button">Quiz</string>
+    <string name="chart_button">Chart</string>
+</resources>
