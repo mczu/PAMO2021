@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BMIcalcextended">
-        <activity android:name=".Chart"></activity>
+        <activity android:name=".Quiz"></activity>
+        <activity android:name=".Chart" />
         <activity android:name=".RecipeForObese" />
         <activity android:name=".RecipeForNormalWeight" />
         <activity android:name=".CaloriesCalculator" />
