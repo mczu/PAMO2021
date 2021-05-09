@@ -17,8 +17,8 @@
         <activity android:name=".RecipeForNormalWeight" />
         <activity android:name=".CaloriesCalculator" />
         <activity android:name=".RecipeForUnderweight" />
-        <activity android:name=".StartView" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".StartView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
