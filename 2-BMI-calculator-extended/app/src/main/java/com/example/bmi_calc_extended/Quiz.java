@@ -22,15 +22,13 @@ public class Quiz extends AppCompatActivity {
     private String userAnswer;
     private int userScore = 0;
     private int questionsLenght = HealthyQuizQuestions.coronavirusQuestions.length;
+    int startQuestionNumber = 0;
 
-    Random r;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
-        r = new Random();
 
         answer1 = (Button) findViewById(R.id.answer1);
         answer2 = (Button) findViewById(R.id.answer2);
@@ -41,16 +39,13 @@ public class Quiz extends AppCompatActivity {
         question = (TextView) findViewById(R.id.question);
 
         score.setText("Score: " + userScore);
-
-        updateQuestion(r.nextInt(questionsLenght));
+        updateQuestion(startQuestionNumber);
 
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(answer1.getText() == userAnswer){
-                    userScore++;
-                    score.setText("Score: " + userScore);
-                    updateQuestion(r.nextInt(questionsLenght));
+                    showScoreAndNextQuestion();
                 }
                 else {
                     gameOver();
@@ -61,9 +56,7 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(answer2.getText() == userAnswer){
-                    userScore++;
-                    score.setText("Score: " + userScore);
-                    updateQuestion(r.nextInt(questionsLenght));
+                    showScoreAndNextQuestion();
                 }
                 else {
                     gameOver();
@@ -74,9 +67,7 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(answer3.getText() == userAnswer){
-                    userScore++;
-                    score.setText("Score: " + userScore);
-                    updateQuestion(r.nextInt(questionsLenght));
+                    showScoreAndNextQuestion();
                 }
                 else {
                     gameOver();
@@ -87,9 +78,7 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(answer4.getText() == userAnswer){
-                    userScore++;
-                    score.setText("Score: " + userScore);
-                    updateQuestion(r.nextInt(questionsLenght));
+                    showScoreAndNextQuestion();
                 }
                 else {
                     gameOver();
@@ -121,11 +110,21 @@ public class Quiz extends AppCompatActivity {
         .setNegativeButton("EXIT", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-//                finish();
                 startActivity(new Intent(getApplicationContext(), StartView.class));
             }
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+    }
+
+    public void showScoreAndNextQuestion(){
+        userScore++;
+        score.setText("Score: " + userScore);
+        startQuestionNumber++;
+        if(startQuestionNumber < questionsLenght) {
+            updateQuestion(startQuestionNumber);
+        } else {
+            gameOver();
+        }
     }
 }
