@@ -1,0 +1,2 @@
+rootProject.name = "BeHealthyKotlinApp"
+include ':app'

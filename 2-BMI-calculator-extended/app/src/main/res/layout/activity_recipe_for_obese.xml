@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RecipeForObese">
 
-    <Button
-        android:id="@+id/go_back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="621dp"
-        android:layout_marginEnd="149dp"
-        android:layout_marginBottom="63dp"
-        android:text="@string/go_back_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/underweight_recipe_title"
         android:layout_width="wrap_content"
@@ -37,7 +23,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
-        app:layout_constraintBottom_toTopOf="@+id/go_back_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/underweight_recipe_title"
